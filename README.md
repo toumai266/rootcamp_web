@@ -1,18 +1,13 @@
 # rootcamp
 
-정보보호 분야 종합 정보 포털
-
-## 프로젝트 개요
-
 rootcamp는 정보보호 분야에 관심이 있는 사용자들에게 체계적이고 유용한 정보를 제공하는 정적 웹사이트입니다.
-구름톤 딥다이브 정보보호과정 16차의 2조, rootcamp 팀의 YOO가 작업했습니다.
+구름톤 딥다이브 정보보호과정 16차 2조, rootcamp 팀의 Heehyeon Yoo가 작업했습니다.
 
 ## 주요 기능
 
 - 📰 **뉴스**: ASEC 블로그 RSS 피드를 통한 최신 정보보호 뉴스 제공
   - 실시간 뉴스 피드 업데이트
   - 카테고리별 필터링 (악성코드, 보안 이슈, 취약점 등)
-  - 월별 아카이브 기능
   
 - 🎯 **진로 탐색**: 정보보호 분야 14개 직무별 상세 정보
   - 공통 스킬 (6개 카테고리, 툴팁으로 상세 설명)
@@ -34,43 +29,6 @@ rootcamp는 정보보호 분야에 관심이 있는 사용자들에게 체계적
 - **Language**: TypeScript
 - **Styling**: CSS (CSS Variables)
 - **Build**: 정적 사이트 생성 (Static Export)
-
-## 시작하기
-
-### 필수 요구사항
-
-- Node.js 18.0 이상
-- npm 또는 yarn
-
-### 설치
-
-```powershell
-npm install
-```
-
-### 개발 서버 실행
-
-```powershell
-npm run dev
-```
-
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인하세요.
-
-### 빌드
-
-정적 사이트로 빌드:
-
-```powershell
-npm run build
-```
-
-빌드된 파일은 `out` 디렉토리에 생성됩니다.
-
-### 프로덕션 실행
-
-```powershell
-npm start
-```
 
 ## 프로젝트 구조
 
@@ -115,36 +73,6 @@ rootcamp/
 ├── package.json              # 의존성 관리
 └── README.md                 # 프로젝트 문서
 ```
-
-## 개발 가이드
-
-### 데이터 추가/수정
-
-- **진로 데이터**: `data/careers.ts` 수정
-- **공통 스킬**: `data/basicSkills.ts` 수정
-- **유용한 사이트**: `data/websites.ts` 수정
-- **팀 정보**: `data/team.ts` 수정
-
-### 컴포넌트 추가
-
-`components/` 디렉토리에 새로운 컴포넌트를 추가하세요.
-- 모든 컴포넌트는 TypeScript로 작성
-- Client 컴포넌트는 `'use client'` 지시어 사용
-
-### 페이지 추가
-
-`app/` 디렉토리에 새로운 디렉토리를 만들고 `page.tsx` 파일을 추가하세요.
-
-### 스타일링
-
-CSS Variables를 사용하여 일관된 디자인을 유지합니다.
-- 전역 변수: `app/globals.css`
-- 다크/라이트 모드 자동 지원
-- CSS 변수 예시:
-  - `--bg-color`: 배경색
-  - `--text-color`: 텍스트 색상
-  - `--primary-color`: 강조 색상
-  - `--border-color`: 테두리 색상
 
 ### 주요 기능 구현
 
