@@ -43,7 +43,7 @@ export default function NewsPage() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container" style={{ marginBottom: '3rem' }}>
         <NewsSection selectedCategory={selectedCategory} />
       </div>
       </div>
