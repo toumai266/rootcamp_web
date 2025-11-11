@@ -22,7 +22,7 @@ export default function ResourcesPage() {
         <div className="VPHero has-image VPHomeHero">
         <div className="container">
           <div className="main">
-            <div className="update-badge">🧐 Nov 2025.11~</div>
+            <div className="update-badge">🧐 Nov 2025</div>
             <h1 className="heading">
               <span className="name clip">Website</span>
             </h1>
