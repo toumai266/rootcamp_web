@@ -39,9 +39,22 @@ export default function MemberCard({ member }: MemberCardProps) {
             fontSize: '2rem',
             color: '#ffffff',
             margin: '0 auto 0.75rem',
+            overflow: 'hidden',
           }}
         >
-          {member.avatar || member.name.charAt(0)}
+          {member.avatar ? (
+            <img
+              src={member.avatar}
+              alt={member.name}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          ) : (
+            member.name.charAt(0)
+          )}
         </div>
         <h3
           style={{
@@ -116,13 +129,13 @@ export default function MemberCard({ member }: MemberCardProps) {
             rel="noopener noreferrer"
             style={{
               color: 'var(--text-light)',
-              fontSize: '1.25rem',
+              fontSize: '0.9rem',
               transition: 'color 0.2s',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--primary-color)')}
             onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-light)')}
           >
-            <span>💻</span>
+            <span>Github💻</span>
           </a>
         )}
         {member.blog && (
@@ -132,13 +145,13 @@ export default function MemberCard({ member }: MemberCardProps) {
             rel="noopener noreferrer"
             style={{
               color: 'var(--text-light)',
-              fontSize: '1.25rem',
+              fontSize: '0.9rem',
               transition: 'color 0.2s',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--primary-color)')}
             onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-light)')}
           >
-            <span>📝</span>
+            <span>Blog📝</span>
           </a>
         )}
         {member.email && (
@@ -146,13 +159,13 @@ export default function MemberCard({ member }: MemberCardProps) {
             href={`mailto:${member.email}`}
             style={{
               color: 'var(--text-light)',
-              fontSize: '1.25rem',
+              fontSize: '0.9rem',
               transition: 'color 0.2s',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--primary-color)')}
             onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-light)')}
           >
-            <span>✉️</span>
+            <span>email✉️</span>
           </a>
         )}
       </div>

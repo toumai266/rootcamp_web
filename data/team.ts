@@ -21,16 +21,16 @@ export interface NotionLink {
 export const notionLinks: NotionLink[] = [
   {
     id: 'team-notion',
-    title: '팀 노션 워크스페이스',
-    description: '프로젝트 문서, 회의록, 학습 자료를 공유하는 팀 노션 페이지입니다.',
-    url: '#',
+    title: '스터디 팀 목표 페이지',
+    description: '스터디 팀의 목표를 정리한 페이지입니다.',
+    url: 'https://www.notion.so/goormkdx/2-rootcamp-29cc0ff4ce3180acb3d6fe865114b721?source=copy_link',
     icon: '📚',
   },
   {
     id: 'study-notion',
-    title: '스터디 노션',
-    description: '정보보호 이론 및 실습 내용을 정리한 스터디 노션 페이지입니다.',
-    url: '#',
+    title: '스터디 팀 페이지',
+    description: '매주 수요일 갱신하는 스터디 팀 페이지입니다.',
+    url: 'https://www.notion.so/goormkdx/2-rootcamp-29cc0ff4ce3180ffaa1fce7df0f8cb38?source=copy_link',
     icon: '✍️',
   },
 ]
@@ -38,47 +38,52 @@ export const notionLinks: NotionLink[] = [
 export const teamMembers: TeamMember[] = [
   {
     id: 'member1',
-    name: '팀원 1',
-    role: 'Team Leader',
-    bio: '정보보호에 관심이 많은 개발자입니다. 웹 보안과 시스템 보안을 공부하고 있습니다.',
+    name: '이수민',
+    role: '팀장',
+    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
     skills: ['Web Security', 'Python', 'Network'],
+    avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
     github: 'https://github.com',
-    email: 'member1@example.com',
+    blog: 'https://blog.example.com',
   },
   {
     id: 'member2',
-    name: '팀원 2',
-    role: 'Security Researcher',
-    bio: '모의해킹과 취약점 분석에 관심이 많습니다. CTF 문제 풀이를 즐깁니다.',
+    name: '임정길',
+    role: '팀원',
+    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
     skills: ['Penetration Testing', 'Reversing', 'Forensics'],
+    avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
     github: 'https://github.com',
     blog: 'https://blog.example.com',
   },
   {
     id: 'member3',
-    name: '팀원 3',
-    role: 'Backend Developer',
-    bio: '안전한 백엔드 시스템 구축에 관심이 있습니다. DevSecOps를 공부하고 있습니다.',
+    name: '김주하',
+    role: '팀원',
+    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
     skills: ['Backend', 'DevSecOps', 'Cloud Security'],
-    github: 'https://github.com',
-    email: 'member3@example.com',
-  },
-  {
-    id: 'member4',
-    name: '팀원 4',
-    role: 'Frontend Developer',
-    bio: '프론트엔드 보안과 웹 접근성에 관심이 많습니다. 사용자 친화적인 UI/UX를 추구합니다.',
-    skills: ['Frontend', 'Web Security', 'React'],
+    avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
     github: 'https://github.com',
     blog: 'https://blog.example.com',
   },
   {
+    id: 'member4',
+    name: '유희현',
+    role: '팀원',
+    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
+    skills: ['Frontend', 'Web Security', 'React'],
+    avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
+    github: 'https://github.com/toumai266',
+    blog: 'https://blog.example.com',
+  },
+  {
     id: 'member5',
-    name: '팀원 5',
-    role: 'System Security',
-    bio: '시스템 보안과 악성코드 분석에 관심이 있습니다. Linux 환경에서의 보안을 연구합니다.',
+    name: '권준현',
+    role: '팀원',
+    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
     skills: ['System Security', 'Malware Analysis', 'Linux'],
+    avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
     github: 'https://github.com',
-    email: 'member5@example.com',
+    blog: 'https://blog.example.com',
   },
 ]
