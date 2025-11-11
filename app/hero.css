@@ -1,0 +1,119 @@
+.VPHero {
+  padding: 48px 0;
+}
+
+.VPHero.has-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.VPHero.has-image .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  width: 100%;
+}
+
+.VPHero.has-image .main {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.VPHero .update-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  margin-bottom: 0;
+  background-color: #eeeeee;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.VPHero.has-image .image {
+  flex-shrink: 0;
+  width: 320px;
+  height: 320px;
+}
+
+.VPHero .heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.VPHero .heading .name {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero .heading .clip {
+  background-clip: text;
+}
+
+.VPHero .tagline {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.VPHero .image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.VPHero .image-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(80px);
+}
+
+.VPHero .VPImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .VPHero.has-image .container {
+    flex-direction: column;
+  }
+
+  .VPHero.has-image .main {
+    text-align: center;
+  }
+
+  .VPHero.has-image .image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .VPHero .heading {
+    font-size: 2.5rem;
+  }
+
+  .VPHero .tagline {
+    font-size: 1.25rem;
+  }
+}
+
