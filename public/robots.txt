@@ -1,0 +1,3 @@
+# RootCamp - 검색엔진 크롤링 방지
+User-agent: *
+Disallow: /

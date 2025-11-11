@@ -2,8 +2,17 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'rootcamp - 구름톤 딥다이브 이론 2조 학습 페이지',
-  description: '구름톤 딥다이브 이론 2조 rootcamp의 학습 페이지입니다.',
+  title: 'rootcamp - 구름톤 딥다이브 이론 2조',
+  description: '구름톤 딥다이브 이론 2조 rootcamp입니다.',
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 }
 
 export default function RootLayout({
