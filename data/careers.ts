@@ -23,28 +23,7 @@ export const careers: Career[] = [
       '조직의 보안 운영 센터(SOC)에서 SIEM, IDS/IPS, EDR 등 보안 솔루션의 로그와 이벤트를 24시간 365일 실시간으로 모니터링하는 전문가입니다. 한국에서는 "보안 관제" 직무로 가장 잘 알려져 있으며, 전문 관제 벤더(MDR/MSSP) 소속이거나 대기업/금융권의 자체 SOC에서 근무합니다.',
     featured: [
       {
-        name: '이수민',
-        reason: '실시간으로 보안 위협을 탐지하고 대응하는 최전선 역할에 매력을 느꼈습니다. 24/7 모니터링을 통해 조직을 지키는 보안의 핵심 업무라는 점이 가장 흥미롭습니다.',
-        learning: [
-          { 
-            text: 'Splunk 기본 쿼리 학습 중 (SPL 문법)',
-            link: 'https://github.com/example/splunk-study'
-          },
-          { 
-            text: '네트워크 패킷 분석 실습 (Wireshark)',
-            link: 'https://github.com/example/packet-analysis'
-          },
-          { 
-            text: 'SIEM 로그 분석 케이스 스터디'
-          },
-          { 
-            text: 'CTI(Cyber Threat Intelligence) 보고서 분석',
-            link: 'https://notion.so/example/cti-analysis'
-          }
-        ]
-      },
-      {
-        name: '김주하',
+        name: '임정길',
         reason: '복잡한 로그 데이터 속에서 패턴을 찾아내고 보안 위협을 식별하는 분석 작업이 매력적입니다. 데이터 분석 능력을 보안 분야에 적용할 수 있다는 점이 흥미롭습니다.',
         learning: [
           {
@@ -160,7 +139,30 @@ export const careers: Career[] = [
     title: '모의 해커 (Penetration Tester)',
     description:
       '조직의 정보 시스템에 대해 실제 공격자의 관점에서 침투를 시도하여, 시스템에 내재된 보안 취약점을 사전에 발견하고 분석하는 전문가입니다. 주로 보안 컨설팅 전문 업체 소속으로 근무하며, 정보통신망법, 전자금융 감독 규정 등에 따른 법적 의무 진단을 수행합니다.',
-    responsibilities: [
+        featured: [
+      {
+        name: '유희현',
+        reason: '충분히 보호되지 않은 시스템을 실제로 공격해보면서 취약점을 찾아내고, 이를 통해 더 나은 보안 대책을 제시하는 과정이 매력적입니다.',
+        learning: [
+          { 
+            text: 'Burp Suite, Metasploit, Frida, MobSF 등 해킹 도구 사용',
+            link: 'https://github.com/example/splunk-study'
+          },
+          { 
+            text: '리버싱 및 코드 분석 연습 (Ghidra, IDA Pro)',
+            link: 'https://github.com/example/packet-analysis'
+          },
+          { 
+            text: '포렌식 분석 실습 (Autopsy, Volatility)'
+          },
+          { 
+            text: '악성코드 분석 및 샘플 연구',
+            link: 'https://notion.so/example/cti-analysis'
+          }
+        ]
+      }
+    ],
+      responsibilities: [
       { title: '웹 애플리케이션 취약점 진단', description: 'OWASP Top 10 등 웹 애플리케이션의 보안 취약점을 진단합니다.' },
       { title: '모바일 앱 취약점 진단', description: 'Android/iOS 애플리케이션의 보안 취약점을 분석합니다.' },
       { title: '소스 코드 보안 분석', description: '시큐어 코딩 관점에서 소스 코드의 보안 약점을 분석합니다.' },
@@ -257,7 +259,26 @@ export const careers: Career[] = [
     title: '정보보호 컨설턴트 (Security Consultant)',
     description:
       '기업의 보안 현황을 종합적으로 진단하고, 법적 규제 준수를 위한 가이드를 제공하며, 조직의 보안 수준을 향상시키기 위한 전략을 수립하는 자문 전문가입니다. ISMS-P 인증 및 개인정보보호법, 주요정보통신기반시설 관련 관리 컨설팅 시장이 매우 큽니다.',
-    responsibilities: [
+        featured: [
+      {
+        name: '이수민',
+        reason: '다양한 산업군의 보안 현황을 진단하고, 맞춤형 보안 전략을 수립하는 과정이 매력적입니다. 조직의 보안 수준 향상에 기여할 수 있다는 점이 흥미롭습니다.',
+        learning: [
+          {
+            text: '컨설팅 사례 연구 및 보고서 작성 연습',
+            link: 'https://github.com/example/siem-correlation'
+          },
+          {
+            text: '정보보호 관리체계(ISMS-P) 표준 심층 학습'
+          },
+          {
+            text: '기술 컨설턴트와 협업을 통한 실무 경험 쌓기',
+            link: 'https://notion.so/example/mitre-attack'
+          }
+        ]
+      }
+    ],
+      responsibilities: [
       { title: 'ISMS-P / ISO27001 인증 컨설팅', description: '정보보호 관리체계 인증 컨설팅을 수행합니다.' },
       { title: '개인정보보호법 컴플라이언스', description: '개인정보보호법 관련 컴플라이언스 및 영향평가(PIA)를 수행합니다.' },
       { title: '주통기 취약점 분석', description: '주요 정보통신 기반 시설의 취약점을 분석하고 평가합니다.' },
@@ -323,7 +344,26 @@ export const careers: Career[] = [
     title: '애플리케이션 보안 엔지니어 (AppSec / DevSecOps)',
     description:
       'Shift-Left 개념을 실현하는 보안 전문가로, DevOps 환경에 보안을 통합하여 소프트웨어 개발 수명주기(SDLC)의 초기 단계부터 보안 취약점을 예방, 탐지, 수정합니다. 개발팀이 보안을 스스로 챙길 수 있도록 돕는 문화적 촉진자이자 기술적 조력자입니다.',
-    responsibilities: [
+        featured: [
+      {
+        name: '권준현',
+        reason: '애플리케이션 개발 프로세스에 보안을 통합하여, 개발자들이 안전한 코드를 작성할 수 있도록 지원하는 역할이 매력적입니다. DevSecOps 문화를 조성하는 데 기여할 수 있다는 점이 흥미롭습니다.',
+        learning: [
+          {
+            text: '애플리케이션 보안 테스트 자동화 구축',
+            link: 'https://github.com/example/siem-correlation'
+          },
+          {
+            text: 'devsecops 파이프라인 스크립트 작성'
+          },
+          {
+            text: '개발자 대상 보안 교육 자료 제작',
+            link: 'https://notion.so/example/mitre-attack'
+          }
+        ]
+      }
+    ],
+      responsibilities: [
       { title: 'CI/CD 파이프라인 보안 테스트', description: 'CI/CD 파이프라인 내에서 SAST, DAST, SCA 등 자동화된 보안 테스트를 구축합니다.' },
       { title: '보안 코딩 가이드라인', description: '보안 코딩 가이드라인을 제공하고 개발자를 교육합니다.' },
       { title: '애플리케이션 취약점 분석', description: '애플리케이션 취약점을 분석하고 우선순위화합니다.' },
@@ -502,7 +542,26 @@ export const careers: Career[] = [
     title: 'AI 보안 전문가 (AI Security Specialist)',
     description:
       '인공지능(AI) 및 머신러닝(ML) 시스템 자체의 고유한 보안 문제를 다루는 최신 분야입니다. 네이버, 카카오 등 자체 LLM 모델을 개발/운영하는 빅테크 기업이나 AI를 보안에 접목하는 전문 기업을 중심으로 포지션이 생겨나고 있습니다.',
-    responsibilities: [
+        featured: [
+      {
+        name: '김주하',
+        reason: 'AI/ML 시스템의 보안 아키텍처를 설계하고, AI 기반 이상 탐지 시스템을 구축하는 역할이 매력적입니다. 생성형 AI의 취약점을 발견하고 평가하는 데 기여할 수 있다는 점이 흥미롭습니다.',
+        learning: [
+          {
+            text: 'AI 보안 관련 논문 및 자료 조사',
+            link: 'https://github.com/example/siem-correlation'
+          },
+          {
+            text: 'Python을 활용한 AI/ML 모델 실습'
+          },
+          {
+            text: '보안 중심의 AI 개발 방법론 학습 중',
+            link: 'https://notion.so/example/mitre-attack'
+          }
+        ]
+      }
+    ],
+      responsibilities: [
       { title: 'AI/ML 보안 아키텍처 설계', description: 'AI/ML 시스템 및 MLOps 파이프라인의 보안 아키텍처를 설계합니다.' },
       { title: 'AI 기반 이상 탐지 시스템', description: 'AI 기반 보안 이상 탐지 시스템을 구축하고 운영합니다.' },
       { title: 'AI 레드팀', description: '프롬프트 인젝션, Jailbreaking 등 AI 레드팀 테스트를 수행합니다.' },
