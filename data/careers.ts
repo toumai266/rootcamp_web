@@ -1,3 +1,9 @@
+export interface FeaturedInfo {
+  name: string
+  reason: string
+  learning: { text: string; link?: string }[]
+}
+
 export interface Career {
   id: string
   title: string
@@ -6,6 +12,7 @@ export interface Career {
   skills: { title: string; description?: string }[]
   certifications?: { title: string; description?: string }[]
   careerPaths?: { title: string; description: string }[]
+  featured?: FeaturedInfo[]
 }
 
 export const careers: Career[] = [
@@ -14,6 +21,46 @@ export const careers: Career[] = [
     title: '보안 관제 전문가 (Security Analyst / SOC)',
     description:
       '조직의 보안 운영 센터(SOC)에서 SIEM, IDS/IPS, EDR 등 보안 솔루션의 로그와 이벤트를 24시간 365일 실시간으로 모니터링하는 전문가입니다. 한국에서는 "보안 관제" 직무로 가장 잘 알려져 있으며, 전문 관제 벤더(MDR/MSSP) 소속이거나 대기업/금융권의 자체 SOC에서 근무합니다.',
+    featured: [
+      {
+        name: '이수민',
+        reason: '실시간으로 보안 위협을 탐지하고 대응하는 최전선 역할에 매력을 느꼈습니다. 24/7 모니터링을 통해 조직을 지키는 보안의 핵심 업무라는 점이 가장 흥미롭습니다.',
+        learning: [
+          { 
+            text: 'Splunk 기본 쿼리 학습 중 (SPL 문법)',
+            link: 'https://github.com/example/splunk-study'
+          },
+          { 
+            text: '네트워크 패킷 분석 실습 (Wireshark)',
+            link: 'https://github.com/example/packet-analysis'
+          },
+          { 
+            text: 'SIEM 로그 분석 케이스 스터디'
+          },
+          { 
+            text: 'CTI(Cyber Threat Intelligence) 보고서 분석',
+            link: 'https://notion.so/example/cti-analysis'
+          }
+        ]
+      },
+      {
+        name: '김주하',
+        reason: '복잡한 로그 데이터 속에서 패턴을 찾아내고 보안 위협을 식별하는 분석 작업이 매력적입니다. 데이터 분석 능력을 보안 분야에 적용할 수 있다는 점이 흥미롭습니다.',
+        learning: [
+          {
+            text: 'SIEM 로그 분석 및 상관분석 규칙 작성 연습',
+            link: 'https://github.com/example/siem-correlation'
+          },
+          {
+            text: 'Python을 활용한 로그 파싱 및 자동화 스크립트 개발'
+          },
+          {
+            text: 'MITRE ATT&CK 프레임워크 학습 중',
+            link: 'https://notion.so/example/mitre-attack'
+          }
+        ]
+      }
+    ],
     responsibilities: [
       { title: '보안 이벤트 실시간 모니터링 및 초기 분석', description: 'SIEM을 활용하여 24/7 실시간으로 보안 이벤트를 모니터링하고 초기 분석을 수행합니다.' },
       { title: '위협 이벤트 분류 및 초기 대응', description: '정탐/오탐을 판별하고 위협 이벤트에 대한 초기 대응(차단)을 수행합니다.' },

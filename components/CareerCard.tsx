@@ -138,12 +138,19 @@ function TooltipItem({ item, style }: TooltipItemProps) {
 
 export default function CareerCard({ career }: CareerCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const hasFeatured = career.featured && career.featured.length > 0
+  
+  // 타이틀에서 한글과 영문 분리
+  const titleMatch = career.title.match(/^(.+?)\s*\((.+)\)$/)
+  const koreanTitle = titleMatch ? titleMatch[1] : career.title
+  const englishTitle = titleMatch ? titleMatch[2] : null
 
   return (
     <>
       <div
         onClick={() => setIsModalOpen(true)}
         style={{
+          position: 'relative',
           padding: '1.5rem',
           backgroundColor: 'var(--bg-secondary)',
           borderRadius: '8px',
@@ -151,6 +158,7 @@ export default function CareerCard({ career }: CareerCardProps) {
           boxShadow: 'var(--card-shadow)',
           cursor: 'pointer',
           transition: 'all 0.2s',
+          overflow: 'hidden',
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = 'translateY(-4px)'
@@ -161,15 +169,71 @@ export default function CareerCard({ career }: CareerCardProps) {
           e.currentTarget.style.boxShadow = 'var(--card-shadow)'
         }}
       >
+        {/* 상단 배경 라인 */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: '2rem',
+            background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%)',
+            borderBottom: '1px solid rgba(102, 126, 234, 0.15)',
+          }}
+        />
+        {hasFeatured && (
+          <div
+            style={{
+              position: 'absolute',
+              top: '0',
+              left: '0',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              padding: '0.5rem 2rem 0.5rem 0.75rem',
+              fontSize: '0.7rem',
+              fontWeight: 'bold',
+              boxShadow: '0 2px 8px rgba(102, 126, 234, 0.4)',
+              clipPath: 'polygon(0 0, 100% 0, calc(100% - 0.75rem) 100%, 0% 100%)',
+              zIndex: 2,
+            }}
+          >
+            ⭐ {career.featured!.length === 1 
+              ? `팀원 중 ${career.featured![0].name}님이 관심 있어요`
+              : `팀원 중 ${career.featured!.length}명이 관심 있어요`}
+          </div>
+        )}
+        {englishTitle && (
+          <div
+            style={{
+              position: 'absolute',
+              top: '0.5rem',
+              right: '0.5rem',
+              fontSize: '0.8rem',
+              color: 'var(--text-light)',
+              opacity: 0.7,
+              textAlign: 'right',
+              lineHeight: 1.3,
+              maxWidth: '45%',
+              fontWeight: '500',
+              zIndex: 1,
+            }}
+          >
+            {englishTitle}
+          </div>
+        )}
         <h3
           style={{
             fontSize: '1.25rem',
             fontWeight: 'bold',
             marginBottom: '0.5rem',
             color: 'var(--primary-color)',
+            marginTop: '1.75rem',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
           }}
         >
-          {career.title}
+          {koreanTitle}
         </h3>
         <p
           style={{
@@ -222,6 +286,7 @@ export default function CareerCard({ career }: CareerCardProps) {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         title={career.title}
+        featured={career.featured}
       >
         <div>
           <p style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>

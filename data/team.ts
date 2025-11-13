@@ -40,8 +40,8 @@ export const teamMembers: TeamMember[] = [
     id: 'member1',
     name: '이수민',
     role: '팀장',
-    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
-    skills: ['Web Security', 'Python', 'Network'],
+    bio: '세상에 완벽한 보안은 없지만, 완벽에 가까워지기 위해 노력하며 문제의 원인을 찾고 해결책을 제시하는 과정에서 보람을 느낍니다. 끊임없이 배우며 신뢰할 수 있는 보안 컨설턴트로 성장하겠습니다!',
+    skills: ['Web Security', 'Python', 'Secure coding', 'Communication'],
     avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
     github: 'https://github.com',
     blog: 'https://blog.example.com',
@@ -70,11 +70,11 @@ export const teamMembers: TeamMember[] = [
     id: 'member4',
     name: '유희현',
     role: '팀원',
-    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
-    skills: ['Frontend', 'Web Security', 'React'],
+    bio: '지식의 격차를 해소하고 더 많은 사람들이 즐길 수 있는, 안전한 서비스를 만들고 보호하는 데 관심이 많습니다.',
+    skills: ['Pentest', 'Web Security', 'React', 'Python', 'Ai', 'Book Editor'],
     avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
     github: 'https://github.com/toumai266',
-    blog: 'https://blog.example.com',
+    blog: 'https://www.notion.so/snaac/29d42dccc51e8074bbc7ccacb1f68f6e?source=copy_link',
   },
   {
     id: 'member5',
