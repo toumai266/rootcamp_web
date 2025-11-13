@@ -70,7 +70,7 @@ export const teamMembers: TeamMember[] = [
     id: 'member4',
     name: '유희현',
     role: '팀원',
-    bio: '지식의 격차를 해소하고 더 많은 사람들이 즐길 수 있는, 안전한 서비스를 만들고 보호하는 데 관심이 많습니다.',
+    bio: '많은 사람들이 즐길 수 있는 안전한 서비스를 만드는 데 관심이 많습니다. 팀 문화를 구성하거나 지식의 격차를 해소하는 데에도 관심이 많습니다.',
     skills: ['Pentest', 'Web Security', 'React', 'Python', 'Ai', 'Book Editor'],
     avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
     github: 'https://github.com/toumai266',
