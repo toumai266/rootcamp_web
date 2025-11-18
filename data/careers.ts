@@ -262,7 +262,7 @@ export const careers: Career[] = [
         featured: [
       {
         name: '이수민',
-        reason: '다양한 산업군의 보안 현황을 진단하고, 맞춤형 보안 전략을 수립하는 과정이 매력적입니다. 조직의 보안 수준 향상에 기여할 수 있다는 점이 흥미롭습니다.',
+        reason: '단순히 문제를 발견하는 데 그치지 않고 실제로 기업의 보안을 강화하는 실질적인 해결책을 제시할 수 있다는 점이 매력으로 다가왔어요.',
         learning: [
           {
             text: '컨설팅 사례 연구 및 보고서 작성 연습',
@@ -344,25 +344,6 @@ export const careers: Career[] = [
     title: '애플리케이션 보안 엔지니어 (AppSec / DevSecOps)',
     description:
       'Shift-Left 개념을 실현하는 보안 전문가로, DevOps 환경에 보안을 통합하여 소프트웨어 개발 수명주기(SDLC)의 초기 단계부터 보안 취약점을 예방, 탐지, 수정합니다. 개발팀이 보안을 스스로 챙길 수 있도록 돕는 문화적 촉진자이자 기술적 조력자입니다.',
-        featured: [
-      {
-        name: '권준현',
-        reason: '애플리케이션 개발 프로세스에 보안을 통합하여, 개발자들이 안전한 코드를 작성할 수 있도록 지원하는 역할이 매력적입니다. DevSecOps 문화를 조성하는 데 기여할 수 있다는 점이 흥미롭습니다.',
-        learning: [
-          {
-            text: '애플리케이션 보안 테스트 자동화 구축',
-            link: 'https://github.com/example/siem-correlation'
-          },
-          {
-            text: 'devsecops 파이프라인 스크립트 작성'
-          },
-          {
-            text: '개발자 대상 보안 교육 자료 제작',
-            link: 'https://notion.so/example/mitre-attack'
-          }
-        ]
-      }
-    ],
       responsibilities: [
       { title: 'CI/CD 파이프라인 보안 테스트', description: 'CI/CD 파이프라인 내에서 SAST, DAST, SCA 등 자동화된 보안 테스트를 구축합니다.' },
       { title: '보안 코딩 가이드라인', description: '보안 코딩 가이드라인을 제공하고 개발자를 교육합니다.' },
@@ -556,6 +537,23 @@ export const careers: Career[] = [
           },
           {
             text: '보안 중심의 AI 개발 방법론 학습 중',
+            link: 'https://notion.so/example/mitre-attack'
+          }
+        ]
+      },
+      {
+        name: '권준현',
+        reason: 'AI/ML 모델의 보안 취약점을 평가하고, AI 모델의 안전성과 신뢰성을 평가하는 데 기여할 수 있다는 점이 매력적입니다.',
+        learning: [
+          {
+            text: '애플리케이션 보안 테스트 자동화 구축',
+            link: 'https://github.com/example/siem-correlation'
+          },
+          {
+            text: 'devsecops 파이프라인 스크립트 작성'
+          },
+          {
+            text: '개발자 대상 보안 교육 자료 제작',
             link: 'https://notion.so/example/mitre-attack'
           }
         ]

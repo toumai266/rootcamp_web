@@ -80,7 +80,7 @@ export const teamMembers: TeamMember[] = [
     id: 'member5',
     name: '권준현',
     role: '팀원',
-    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
+    bio: '남녀노소 모두가 안전한 세상을 꿈꾸고 있습니다. 아직은 미숙한 햇병아리에 불과하지만 지식과 실력을 모두 길러 뉴스에서 보안 사고가 나오지 않을 그 날을 위해 노력하겠습니다.',
     skills: ['System Security', 'Malware Analysis', 'Linux'],
     avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
     github: 'https://github.com',
