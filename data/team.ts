@@ -48,16 +48,6 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'member2',
-    name: '임정길',
-    role: '팀원',
-    bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
-    skills: ['Penetration Testing', 'Reversing', 'Forensics'],
-    avatar: 'https://i1.sndcdn.com/avatars-000515695992-xrb3sl-t500x500.jpg', // 이미지 URL 추가
-    github: 'https://github.com',
-    blog: 'https://blog.example.com',
-  },
-  {
-    id: 'member3',
     name: '김주하',
     role: '팀원',
     bio: '공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.공부하고 있습니다.',
@@ -67,7 +57,7 @@ export const teamMembers: TeamMember[] = [
     blog: 'https://blog.example.com',
   },
   {
-    id: 'member4',
+    id: 'member3',
     name: '유희현',
     role: '팀원',
     bio: '많은 사람들이 즐길 수 있는 안전한 서비스를 만드는 데 관심이 많습니다. 팀 문화를 구성하거나 지식의 격차를 해소하는 데에도 관심이 많습니다.',
@@ -77,7 +67,7 @@ export const teamMembers: TeamMember[] = [
     blog: 'https://www.notion.so/snaac/29d42dccc51e8074bbc7ccacb1f68f6e?source=copy_link',
   },
   {
-    id: 'member5',
+    id: 'member4',
     name: '권준현',
     role: '팀원',
     bio: '남녀노소 모두가 안전한 세상을 꿈꾸고 있습니다. 아직은 미숙한 햇병아리에 불과하지만 지식과 실력을 모두 길러 뉴스에서 보안 사고가 나오지 않을 그 날을 위해 노력하겠습니다.',
