@@ -131,12 +131,20 @@ export async function updateTeamMember(updatedMember: TeamMember): Promise<boole
                 github: updatedMember.github,
                 blog: updatedMember.blog
             })
-            .eq('id', updatedMember.id);
+            .eq('id', updatedMember.id)
+            .select();
 
         if (error) {
             console.error('Error updating member:', error);
             return false;
         }
+
+        if (data.length === 0) {
+            console.error(`Update failed: Member ID ${updatedMember.id} not found in DB`);
+            return false;
+        }
+
+        console.log(`Successfully updated member: ${updatedMember.id}`);
         return true;
     } catch (error) {
         console.error('Error in updateTeamMember:', error);
