@@ -46,19 +46,6 @@ rootcamp는 정보보호 분야에 관심이 있는 사용자들에게 체계적
 - **Backend**: Node.js API Routes
 - **Database**: **Supabase** (PostgreSQL)
 
-## 환경 변수 설정 (.env.local)
-
-프로젝트 실행을 위해 다음 환경 변수가 필요합니다.
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://your-project-url.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=sb_secret_Reference_your_settings...
-ACCESS_CODE_MEMBER1=1234  # 이수민
-ACCESS_CODE_MEMBER2=1234  # 유희현
-ACCESS_CODE_MEMBER3=1234  # 권준현
-ACCESS_CODE_MEMBER4=1234  # 김주하
-```
-
 ## 프로젝트 구조
 
 ```
