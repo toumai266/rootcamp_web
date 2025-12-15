@@ -186,6 +186,7 @@ function EditInterestModal({
 
       if (res.ok) {
         onClose()
+        alert('저장되었습니다.')
         window.location.reload()
       } else {
         alert('저장 실패')
@@ -210,6 +211,7 @@ function EditInterestModal({
 
       if (res.ok) {
         onClose()
+        alert('저장되었습니다.')
         window.location.reload()
       } else {
         alert('삭제 실패')

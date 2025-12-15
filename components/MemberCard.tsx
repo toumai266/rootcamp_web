@@ -34,6 +34,7 @@ export default function MemberCard({ member }: MemberCardProps) {
 
       if (res.ok) {
         setIsEditing(false)
+        alert('저장되었습니다.')
         window.location.reload() // Refresh to show changes
       } else {
         alert('Failed to save changes')

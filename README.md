@@ -72,7 +72,7 @@ rootcamp/
 │   ├── types.ts             # 공용 타입 정의
 │   └── ...
 ├── lib/
-│   └── db.ts                # JSON 파일 I/O 유틸리티
+│   └── db.ts                # Supabase DB 유틸리티 (Data Fetching/Seeding)
 ├── public/                   # 정적 파일
 ├── next.config.js            # Next.js 설정
 └── README.md                 # 프로젝트 문서
