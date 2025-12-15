@@ -14,5 +14,13 @@ export const supabase = createClient(supabaseUrl, supabaseKey, {
     auth: {
         persistSession: false, // No need to persist session on server
         autoRefreshToken: false,
+    },
+    global: {
+        fetch: (url, options) => {
+            return fetch(url, {
+                ...options,
+                cache: 'no-store',
+            })
+        }
     }
 })
