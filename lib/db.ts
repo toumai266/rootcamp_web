@@ -122,7 +122,7 @@ export async function getCareers(): Promise<Career[]> {
 // Write functions
 export async function updateTeamMember(updatedMember: TeamMember): Promise<boolean> {
     try {
-        const { error } = await supabase
+        const { data, error } = await supabase
             .from('team_members')
             .update({
                 role: updatedMember.role,
