@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // output: 'export', // Dynamic Mode로 변경 (API 사용을 위해)
   images: {
     unoptimized: true,
   },
