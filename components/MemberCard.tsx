@@ -1,8 +1,8 @@
-
 'use client'
 
 import { TeamMember } from '@/data/types'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 interface MemberCardProps {
   member: TeamMember
@@ -201,9 +201,11 @@ export default function MemberCard({ member }: MemberCardProps) {
           }}
         >
           {member.avatar ? (
-            <img
+            <Image
               src={member.avatar}
               alt={member.name}
+              width={80}
+              height={80}
               style={{
                 width: '100%',
                 height: '100%',

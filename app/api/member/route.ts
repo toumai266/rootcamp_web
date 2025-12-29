@@ -1,5 +1,6 @@
 
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { updateTeamMember, TeamMember } from '@/lib/db'; // Make sure to update tsconfig paths if needed or use relative path
 
 // We need to define types or import them. Since lib/db exports them, we can import.
@@ -30,6 +31,8 @@ export async function PUT(req: NextRequest) {
         console.log('Update Result:', success);
 
         if (success) {
+            // 캐시 즉시 무효화 - 편집 내용 바로 반영
+            revalidatePath('/');
             return NextResponse.json({ success: true });
         } else {
             return NextResponse.json({ success: false, message: 'Update failed' }, { status: 500 });

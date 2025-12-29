@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Navigation from '@/components/Navigation'
 import MemberCard from '@/components/MemberCard'
 import CategoryFilter from '@/components/CategoryFilter'
@@ -59,7 +60,14 @@ export default function HomeClient({ initialMembers, notionLinks }: HomeClientPr
                         <div className="image">
                             <div className="image-container">
                                 <div className="image-bg"></div>
-                                <img className="VPImage image-src" src="/logo1.png" alt="rootcamp Icon" />
+                                <Image
+                                    className="VPImage image-src"
+                                    src="/logo1.png"
+                                    alt="rootcamp Icon"
+                                    width={320}
+                                    height={320}
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>

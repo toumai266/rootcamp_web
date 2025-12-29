@@ -7,8 +7,15 @@ import path from 'path';
 // Types re-export
 export type { TeamMember, Career, FeaturedInfo };
 
-// Helper to seed data if DB is empty
+// 모듈 레벨 플래그: 서버 인스턴스당 1회만 시드 체크
+let seedCheckDone = false;
+
+// Helper to seed data if DB is empty (1회만 실행)
 async function seedIfNeeded() {
+    // 이미 체크했으면 스킵 (매 요청마다 DB 왕복 방지)
+    if (seedCheckDone) return;
+    seedCheckDone = true;
+
     // Check if team_members is empty
     const { count: memberCount, error: memberError } = await supabase
         .from('team_members')
@@ -102,17 +109,9 @@ export async function getCareers(): Promise<Career[]> {
             careerPaths: item.career_paths // Map back
         })) as Career[];
 
-        // Manual Sort: Match data/careers.json order
-        try {
-            const fileData = fs.readFileSync(path.join(process.cwd(), 'data/careers.json'), 'utf-8');
-            const fileCareers: Career[] = JSON.parse(fileData);
-            const orderMap = new Map(fileCareers.map((c, i) => [c.id, i]));
-
-            return careers.sort((a, b) => (orderMap.get(a.id) ?? 999) - (orderMap.get(b.id) ?? 999));
-        } catch (e) {
-            console.warn('Could not sort by original JSON order, returning default sort');
-            return careers;
-        }
+        // ID 기반 정렬 (파일 I/O 제거 - 성능 개선)
+        // ID 형식: career1, career2, ... 또는 알파벳순
+        return careers.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
     } catch (error) {
         console.error('Error fetching careers:', error);
         return [];

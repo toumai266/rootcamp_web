@@ -1,5 +1,6 @@
 
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { updateCareerFeatured, deleteCareerFeatured, FeaturedInfo } from '@/lib/db';
 
 export async function PUT(req: NextRequest) {
@@ -25,6 +26,8 @@ export async function PUT(req: NextRequest) {
         const success = await updateCareerFeatured(jobId, featuredInfo);
 
         if (success) {
+            // 캐시 즉시 무효화 - 편집 내용 바로 반영
+            revalidatePath('/careers');
             return NextResponse.json({ success: true });
         } else {
             return NextResponse.json({ success: false, message: 'Update failed' }, { status: 500 });
@@ -57,6 +60,8 @@ export async function DELETE(req: NextRequest) {
         const success = await deleteCareerFeatured(jobId, name);
 
         if (success) {
+            // 캐시 즉시 무효화 - 삭제 내용 바로 반영
+            revalidatePath('/careers');
             return NextResponse.json({ success: true });
         } else {
             return NextResponse.json({ success: false, message: 'Delete failed (Item might not exist)' }, { status: 404 });

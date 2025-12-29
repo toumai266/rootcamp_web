@@ -2,7 +2,13 @@
 const nextConfig = {
   // output: 'export', // Dynamic Mode로 변경 (API 사용을 위해)
   images: {
-    unoptimized: true,
+    // 이미지 최적화 활성화 (WebP/AVIF 자동 변환)
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i1.sndcdn.com', // 팀원 아바타 이미지
+      },
+    ],
   },
   trailingSlash: true,
   async headers() {
