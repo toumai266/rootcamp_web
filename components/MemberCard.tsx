@@ -36,6 +36,10 @@ export default function MemberCard({ member }: MemberCardProps) {
         setIsEditing(false)
         alert('저장되었습니다.')
         window.location.reload() // Refresh to show changes
+      } else if (res.status === 401 || res.status === 403) {
+        alert('세션이 만료되었습니다. 다시 로그인해주세요.')
+        localStorage.removeItem('rootcamp_user')
+        window.location.reload()
       } else {
         alert('Failed to save changes')
       }
