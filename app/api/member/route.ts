@@ -26,9 +26,7 @@ export async function PUT(req: NextRequest) {
             return NextResponse.json({ success: false, message: 'Forbidden: You can only edit your own profile' }, { status: 403 });
         }
 
-        console.log('Update Request:', member.name, member.id);
         const success = await updateTeamMember(member);
-        console.log('Update Result:', success);
 
         if (success) {
             // 캐시 즉시 무효화 - 편집 내용 바로 반영

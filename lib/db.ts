@@ -22,7 +22,7 @@ async function seedIfNeeded() {
         .select('*', { count: 'exact', head: true });
 
     if (!memberError && memberCount === 0) {
-        console.log('Seeding Team Members to Supabase...');
+
         const data = fs.readFileSync(path.join(process.cwd(), 'data/team.json'), 'utf-8');
         const members: TeamMember[] = JSON.parse(data);
         const { error: insertError } = await supabase.from('team_members').insert(members);
@@ -35,7 +35,7 @@ async function seedIfNeeded() {
         .select('*', { count: 'exact', head: true });
 
     if (!careerError && careerCount === 0) {
-        console.log('Seeding Careers to Supabase...');
+
         const data = fs.readFileSync(path.join(process.cwd(), 'data/careers.json'), 'utf-8');
         const careers: Career[] = JSON.parse(data);
 
@@ -143,7 +143,7 @@ export async function updateTeamMember(updatedMember: TeamMember): Promise<boole
             return false;
         }
 
-        console.log(`Successfully updated member: ${updatedMember.id}`);
+
         return true;
     } catch (error) {
         console.error('Error in updateTeamMember:', error);
